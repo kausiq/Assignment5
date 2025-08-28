@@ -19,7 +19,9 @@
   <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="size-9 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold">ES</div>
+        <div class="size-9 rounded-full  flex items-center justify-center overflow-hidden">
+          <img src="/assets/logo.png" alt="Logo" class="w-7 h-7 object-contain" onerror="this.style.display='none';this.parentNode.textContent='ES';">
+        </div>
         <div class="leading-tight">
           <div class="font-semibold">Emergency Service</div>
           <div class="text-xs text-slate-500">Bangladesh</div>
@@ -46,10 +48,12 @@
   </nav>
 
   <!-- Hero -->
-  <header class="bg-gradient-to-r from-emerald-700 via-emerald-600 to-emerald-500 text-white">
+  <header class="text-white" style="background: linear-gradient(90deg, #013223 0%, #006747 50%, #013223 100%);">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-center">
       <div class="mx-auto size-14 rounded-full bg-white/20 ring-2 ring-white/30 flex items-center justify-center mb-4">
-        <div class="size-9 rounded-full bg-emerald-900/80 flex items-center justify-center font-bold">BD</div>
+        <div class="size-12 rounded-full bg-emerald-900/80 flex items-center justify-center overflow-hidden">
+            <img src="/assets/logo-dark.png" alt="Bangladesh" class="w-16 h-16 object-contain" style="background:transparent;" onerror="this.style.display='none';">
+        </div>
       </div>
       <h1 class="text-2xl sm:text-3xl font-extrabold">Emergency Service Directory</h1>
       <p class="mt-2 text-sm sm:text-base text-emerald-50">Government Emergency Services at Your Fingertips — A project by the Government of the People's Republic of Bangladesh</p>
