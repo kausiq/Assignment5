@@ -54,11 +54,25 @@ function addHistory({ name, number }) {
 
 function makeCard(svc) {
 	const node = els.cardTpl.content.firstElementChild.cloneNode(true);
-	node.querySelector('.service-bn').textContent = svc.en; // top small line (Bangla/primary)
-	node.querySelector('.service-en').textContent = svc.en; // bold title
+	// Card info
+	node.querySelector('.service-en').textContent = svc.en;
+	node.querySelector('.service-bn').textContent = svc.bn;
 	node.querySelector('.number').textContent = svc.number;
 	node.querySelector('.category').textContent = svc.category;
-	node.querySelector('.size-10 span').textContent = svc.icon;
+	// Icon image
+	const iconImg = node.querySelector('.service-icon');
+	if (iconImg) {
+		// If you have image URLs, use svc.icon as src, else fallback to emoji as data URI
+		if (svc.icon.startsWith('http')) {
+			iconImg.src = svc.icon;
+			iconImg.alt = svc.en;
+		} else {
+			// Render emoji as SVG data URI for crisp display
+			const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text x='50%' y='50%' text-anchor='middle' dominant-baseline='central' font-size='28'>${svc.icon}</text></svg>`;
+			iconImg.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+			iconImg.alt = svc.en;
+		}
+	}
 
 	// Like
 	node.querySelector('.like-btn').addEventListener('click', () => {
