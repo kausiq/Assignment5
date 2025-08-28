@@ -1,61 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Emergency Service Directory</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-html { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Service Directory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      html { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+      /* Smooth icon button focus */
+      .icon-btn:focus { outline: 2px solid #10b981; outline-offset: 2px; }
+    </style>
 </head>
 <body class="bg-emerald-50 text-slate-800">
-<!-- Navbar -->
-<nav class="sticky top-0 z-40 bg-white/90 backdrop-blur shadow">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-<div class="flex items-center gap-3">
-<div class="size-9 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold">ES</div>
-<div>
-<div class="font-semibold">Emergency Service</div>
-<div class="text-xs text-slate-500">Bangladesh</div>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<div class="flex items-center gap-1 bg-rose-50 px-3 py-1 text-rose-700 border rounded-full">
-❤️ <span id="likesCount">0</span>
-</div>
-<div class="flex items-center gap-1 bg-yellow-50 px-3 py-1 text-yellow-700 border rounded-full">
-💰 <span id="coinCount">100</span>
-</div>
-<div class="flex items-center gap-1 bg-sky-50 px-3 py-1 text-sky-700 border rounded-full">
-📋 <span id="copyCount">0</span>
-</div>
-</div>
-</div>
-</nav>
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="size-9 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold">ES</div>
+        <div class="leading-tight">
+          <div class="font-semibold">Emergency Service</div>
+          <div class="text-xs text-slate-500">Bangladesh</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 sm:gap-4">
+        <!-- Heart count -->
+        <div class="flex items-center gap-1 rounded-full bg-rose-50 px-3 py-1 text-rose-700 border border-rose-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" fill="currentColor"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.188 2.25 12.514 2.25 9.318 2.25 7.114 4.06 5.25 6.375 5.25c1.36 0 2.693.633 3.62 1.707l.005.006a.75.75 0 001.12 0l.006-.006C12.053 5.883 13.386 5.25 14.746 5.25c2.314 0 4.124 1.864 4.124 4.068 0 3.196-2.438 5.87-4.739 7.988a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.218l-.022.012-.007.003-.003.002a.75.75 0 01-.698 0l-.003-.002z"/></svg>
+          <span id="likesCount" class="text-sm font-semibold">0</span>
+        </div>
+        <!-- Coin count -->
+        <div class="flex items-center gap-1 rounded-full bg-yellow-50 px-3 py-1 text-yellow-700 border border-yellow-100">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-4" fill="currentColor"><path d="M12 2C6.477 2 2 4.239 2 7v10c0 2.761 4.477 5 10 5s10-2.239 10-5V7c0-2.761-4.477-5-10-5zm0 2c4.963 0 8 1.86 8 3s-3.037 3-8 3-8-1.86-8-3 3.037-3 8-3zm0 14c-4.963 0-8-1.86-8-3V9.874C5.291 11.145 8.304 12 12 12s6.709-.855 8-2.126V15c0 1.14-3.037 3-8 3z"/></svg>
+          <span id="coinCount" class="text-sm font-semibold">100</span>
+        </div>
+        <!-- Copy count -->
+        <div class="flex items-center gap-1 rounded-full bg-sky-50 px-3 py-1 text-sky-700 border border-sky-100">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-4" fill="currentColor"><path d="M16 1H4c-1.103 0-2 .897-2 2v12h2V3h12V1z"></path><path d="M20 5H8c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zm0 16H8V7h12v14z"></path></svg>
+          <span id="copyCount" class="text-sm font-semibold">0</span>
+        </div>
+      </div>
+    </div>
+  </nav>
 
+  <!-- Hero -->
+  <header class="bg-gradient-to-r from-emerald-700 via-emerald-600 to-emerald-500 text-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-center">
+      <div class="mx-auto size-14 rounded-full bg-white/20 ring-2 ring-white/30 flex items-center justify-center mb-4">
+        <div class="size-9 rounded-full bg-emerald-900/80 flex items-center justify-center font-bold">BD</div>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-extrabold">Emergency Service Directory</h1>
+      <p class="mt-2 text-sm sm:text-base text-emerald-50">Government Emergency Services at Your Fingertips — A project by the Government of the People's Republic of Bangladesh</p>
+    </div>
+  </header>
 
-<!-- Hero -->
-<header class="bg-gradient-to-r from-emerald-700 via-emerald-600 to-emerald-500 text-white">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-center">
-<div class="mx-auto size-14 rounded-full bg-white/20 flex items-center justify-center mb-4">BD</div>
-<h1 class="text-2xl sm:text-3xl font-extrabold">Emergency Service Directory</h1>
-<p class="mt-2 text-sm sm:text-base text-emerald-50">Government Emergency Services at Your Fingertips — A project by the Government of Bangladesh</p>
-</div>
-</header>
+  <!-- Main -->
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <!-- Cards column -->
+      <section class="lg:col-span-3">
+        <div id="cardsGrid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+      </section>
 
+      <!-- History column -->
+      <aside class="lg:col-span-1">
+        <div class="bg-white rounded-2xl shadow">
+          <div class="flex items-center justify-between px-4 py-3 border-b">
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-5 text-slate-700" fill="currentColor"><path d="M18 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zm0 18H6V4h12v16z"></path><path d="M8 7h8v2H8zM8 11h8v2H8zM8 15h5v2H8z"></path></svg>
+              <h2 class="font-semibold">Call History</h2>
+            </div>
+            <button id="clearHistoryBtn" class="icon-btn text-sm rounded-full bg-emerald-50 hover:bg-emerald-100 active:bg-emerald-200 text-emerald-700 px-3 py-1 border border-emerald-200">Clear</button>
+          </div>
+          <div id="historyList" class="max-h-[560px] overflow-auto divide-y">
+            <div class="p-4 text-sm text-slate-500" id="historyEmpty">No calls yet.</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
 
-<!-- Main -->
-<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-<div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
-<!-- Cards column -->
-<section class="lg:col-span-3">
-<div id="cardsGrid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6"></div>
-</section>
+  <!-- Template for a card (cloned by JS) -->
+  <template id="cardTemplate">
+    <div class="bg-white rounded-2xl shadow p-4 flex flex-col gap-3">
+      <div class="flex items-start justify-between">
+        <div class="flex items-center gap-3">
+          <div class="size-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
+            <!-- icon slot -->
+            <span class="text-xl">☎️</span>
+          </div>
+          <div>
+            <p class="text-sm text-slate-500 leading-tight service-bn"></p>
+            <h3 class="font-semibold leading-tight service-en"></h3>
+          </div>
+        </div>
+        <button class="icon-btn like-btn text-rose-500 hover:text-rose-600" title="Like">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="currentColor"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.188 2.25 12.514 2.25 9.318 2.25 7.114 4.06 5.25 6.375 5.25c1.36 0 2.693.633 3.62 1.707l.005.006a.75.75 0 001.12 0l.006-.006C12.053 5.883 13.386 5.25 14.746 5.25c2.314 0 4.124 1.864 4.124 4.068 0 3.196-2.438 5.87-4.739 7.988a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.218l-.022.012-.007.003-.003.002a.75.75 0 01-.698 0l-.003-.002z"/></svg>
+        </button>
+      </div>
+      <div>
+        <div class="text-2xl font-bold tracking-tight number"></div>
+        <div class="mt-2">
+          <span class="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border">
+            <span class="size-1.5 rounded-full bg-slate-500"></span>
+            <span class="category"></span>
+          </span>
+        </div>
+      </div>
+      <div class="mt-auto grid grid-cols-2 gap-3">
+        <button class="icon-btn copy-btn flex items-center justify-center gap-2 rounded-xl border bg-white hover:bg-slate-50 active:bg-slate-100 py-2 text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.103 0-2 .897-2 2v12h2V3h12V1z"></path><path d="M20 5H8c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zm0 16H8V7h12v14z"></path></svg>
+          <span>Copy</span>
+        </button>
+        <button class="icon-btn call-btn flex items-center justify-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white py-2 text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" fill="currentColor"><path d="M21 16.5l-5.2-1.3a1 1 0 00-1 .26l-2.2 2.2a16 16 0 01-7.2-7.2l2.2-2.2a1 1 0 00.26-1L7.5 3a1 1 0 00-1.2-.74L2.3 3.02A1 1 0 001.5 4c0 10.22 8.28 18.5 18.5 18.5a1 1 0 00.98-.8l.76-4a1 1 0 00-.74-1.2z"/></svg>
+          <span>Call</span>
+        </button>
+      </div>
+    </div>
+  </template>
 
-
-<!-- History column -->
+  <script src="script.js"></script>
+</body>
 </html>
