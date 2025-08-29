@@ -3,12 +3,12 @@ const services = [
 	{ id: 'nat', en: 'National Emergency Number', number: '999', category: 'All', icon: './assets/emergency.png' },
 	{ id: 'pol', en: 'Police Helpline Number', number: '999', category: 'Police', icon: './assets/police.png' },
 	{ id: 'fire', en: 'Fire Service Number', number: '999', category: 'Fire', icon: './assets/fire-service.png' },
-	{ id: 'amb', en: 'Ambulance Service', number: '999', category: 'Health', icon: './assets/ambulance.png' },
-	{ id: 'wcn', en: 'Women & Child Helpline', number: '999', category: 'Help', icon: './assets/emergency.png' },
-	{ id: 'anti', en: 'Anti-Corruption Helpline', number: '999', category: 'Govt.', icon: './assets/emergency.png' },
-	{ id: 'elec', en: 'Electricity Helpline', number: '999', category: 'Electricity', icon: './assets/emergency.png' },
-	{ id: 'brac', en: 'Brac Helpline', number: '999', category: 'NGO', icon: './assets/brac.png' },
-	{ id: 'rail', en: 'Bangladesh Railway Helpline', number: '999', category: 'Travel', icon: './assets/Bangladesh-Railway.png' },
+	{ id: 'amb', en: 'Ambulance Service', number: '1994-999999', category: 'Health', icon: './assets/ambulance.png' },
+	{ id: 'wcn', en: 'Women & Child Helpline', number: '109', category: 'Help', icon: './assets/emergency.png' },
+	{ id: 'anti', en: 'Anti-Corruption Helpline', number: '106', category: 'Govt.', icon: './assets/emergency.png' },
+	{ id: 'elec', en: 'Electricity Helpline', number: '16216', category: 'Electricity', icon: './assets/emergency.png' },
+	{ id: 'brac', en: 'Brac Helpline', number: '16445', category: 'NGO', icon: './assets/brac.png' },
+	{ id: 'rail', en: 'Bangladesh Railway Helpline', number: '163', category: 'Travel', icon: './assets/Bangladesh-Railway.png' },
 ];
 
 // ---------- State ----------

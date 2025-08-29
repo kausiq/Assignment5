@@ -18,16 +18,16 @@
   <!-- Navbar -->
   <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="size-9 rounded-full  flex items-center justify-center overflow-hidden">
-          <img src="./assets/logo.png" alt="Logo" class="w-7 h-7 object-contain" onerror="this.style.display='none';this.parentNode.textContent='ES';">
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="size-8 sm:size-9 rounded-full flex items-center justify-center overflow-hidden">
+          <img src="./assets/logo.png" alt="Logo" class="w-6 h-6 sm:w-7 sm:h-7 object-contain" >
         </div>
-        <div class="leading-tight" style="color:#006747;">
+        <div class="leading-tight text-xs sm:text-base" style="color:#006747;">
           <span style="font-weight:bold;">Emergency</span><br>
           <span style="font-weight:bold;">Service</span>
         </div>
       </div>
-      <div class="flex items-center gap-3 sm:gap-4">
+      <div class="flex items-center gap-2 sm:gap-4">
         <!-- Heart count -->
   <div class="flex items-center justify-center rounded-full px-6 py-2" style="background:rgba(65,255,120,0.1);">
           <svg xmlns="http://www.w3.org/2000/svg" class="size-6 text-red mr-2" viewBox="0 0 24 24" fill="red"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.188 2.25 12.514 2.25 9.318 2.25 7.114 4.06 5.25 6.375 5.25c1.36 0 2.693.633 3.62 1.707l.005.006a.75.75 0 001.12 0l.006-.006C12.053 5.883 13.386 5.25 14.746 5.25c2.314 0 4.124 1.864 4.124 4.068 0 3.196-2.438 5.87-4.739 7.988a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.218l-.022.012-.007.003-.003.002a.75.75 0 01-.698 0l-.003-.002z"/></svg>
@@ -49,37 +49,35 @@
 
   <!-- Hero -->
   <header class="text-white" style="background: linear-gradient(90deg, #013223 0%, #006747 50%, #013223 100%);">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-center">
-      <div class="mx-auto size-14 rounded-full bg-white/20 ring-2 ring-white/30 flex items-center justify-center mb-4">
-        <div class="size-12 rounded-full bg-emerald-900/80 flex items-center justify-center overflow-hidden">
-            <img src="./assets/logo-dark.png" alt="Bangladesh" class="w-16 h-16 object-contain" style="background:transparent;" onerror="this.style.display='none';">
-        </div>
+    <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8 py-6 sm:py-10 text-center">
+      <div class="mx-auto size-10 sm:size-12 rounded-full bg-emerald-900/80 flex items-center justify-center overflow-hidden mb-3 sm:mb-4">
+        <img src="./assets/logo-dark.png" alt="Bangladesh" class="w-[92px] h-[92px] sm:w-[92px] h-[92px] object-contain"  >
       </div>
-      <h1 class="text-2xl sm:text-3xl font-extrabold">Emergency Service Directory</h1>
-      <p class="mt-2 text-sm sm:text-base text-emerald-50">Government Emergency Services at Your Fingertips — A project by the Government of the People's Republic of Bangladesh</p>
+      <h1 class="text-lg sm:text-2xl md:text-3xl font-extrabold">Emergency Service Directory</h1>
+      <p class="mt-2 text-xs sm:text-sm md:text-base text-emerald-50">Government Emergency Services at Your Fingertips — A project by the Government of the People's Republic of Bangladesh</p>
     </div>
   </header>
 
   <!-- Main -->
-  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+  <main class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8 py-4 sm:py-6">
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-4">
       <!-- Cards column -->
       <section class="lg:col-span-3">
-        <div id="cardsGrid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+        <div id="cardsGrid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3"></div>
       </section>
 
       <!-- History column -->
       <aside class="lg:col-span-1">
-        <div class="bg-white rounded-2xl shadow">
-          <div class="flex items-center justify-between px-4 py-3 border-b">
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-5 text-slate-700" fill="currentColor"><path d="M18 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zm0 18H6V4h12v16z"></path><path d="M8 7h8v2H8zM8 11h8v2H8zM8 15h5v2H8z"></path></svg>
-              <h2 class="font-semibold">Call History</h2>
+        <div class="bg-white rounded-2xl shadow mt-4 lg:mt-0">
+          <div class="flex items-center justify-between px-2 sm:px-4 py-2 sm:py-3 border-b">
+            <div class="flex items-center gap-1 sm:gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-4 sm:size-5 text-slate-700" fill="currentColor"><path d="M18 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zm0 18H6V4h12v16z"></path><path d="M8 7h8v2H8zM8 11h8v2H8zM8 15h5v2H8z"></path></svg>
+              <h2 class="font-semibold text-xs sm:text-base">Call History</h2>
             </div>
-            <button id="clearHistoryBtn" class="icon-btn text-sm rounded-full bg-emerald-50 hover:bg-emerald-100 active:bg-emerald-200 text-emerald-700 px-3 py-1 border border-emerald-200">Clear</button>
+            <button id="clearHistoryBtn" class="icon-btn text-xs sm:text-sm rounded-full bg-emerald-50 hover:bg-emerald-100 active:bg-emerald-200 text-emerald-700 px-2 sm:px-3 py-1 border border-emerald-200">Clear</button>
           </div>
-          <div id="historyList" class="max-h-[560px] overflow-auto divide-y">
-            <div class="p-4 text-sm text-slate-500" id="historyEmpty">No calls yet.</div>
+          <div id="historyList" class="max-h-[320px] sm:max-h-[560px] overflow-auto divide-y">
+            <div class="p-2 sm:p-4 text-xs sm:text-sm text-slate-500" id="historyEmpty">No calls yet.</div>
           </div>
         </div>
       </aside>
@@ -88,35 +86,34 @@
 
   <!-- Template for a card (cloned by JS) -->
     <template id="cardTemplate">
-      <div class="bg-white rounded-2xl shadow p-5 flex flex-col gap-4 border border-[#F3FDF6]" style="box-shadow:0 2px 12px 0 rgba(65,255,120,0.08);">
+      <div class="bg-white rounded-2xl shadow p-3 sm:p-5 flex flex-col gap-3 sm:gap-4 border border-[#F3FDF6]" style="box-shadow:0 2px 12px 0 rgba(65,255,120,0.08);">
         <div class="flex items-start justify-between">
-          <div class="flex items-center gap-3">
-            <div class="size-12 rounded-xl flex items-center justify-center bg-[#FDEDED]">
+          <div class="flex items-center gap-2 sm:gap-3">
+            <div class="size-10 sm:size-12 rounded-xl flex items-center justify-center bg-[#FDEDED]">
               <!-- icon slot -->
-              <img class="w-8 h-8 object-contain service-icon" src="" alt="icon">
+              <img class="w-7 h-7 sm:w-8 sm:h-8 object-contain service-icon" src="" alt="icon">
             </div>
             <div>
-              <h3 class="font-bold text-lg service-en"></h3>
-              <p class="text-sm text-slate-500 leading-tight service-bn"></p>
+              <h3 class="font-bold text-base sm:text-lg service-en"></h3>
             </div>
           </div>
           <button class="icon-btn like-btn text-rose-500 hover:text-rose-600" title="Like">
-            <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="red"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.188 2.25 12.514 2.25 9.318 2.25 7.114 4.06 5.25 6.375 5.25c1.36 0 2.693.633 3.62 1.707l.005.006a.75.75 0 001.12 0l.006-.006C12.053 5.883 13.386 5.25 14.746 5.25c2.314 0 4.124 1.864 4.124 4.068 0 3.196-2.438 5.87-4.739 7.988a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.218l-.022.012-.007.003-.003.002a.75.75 0 01-.698 0l-.003-.002z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 sm:size-6" viewBox="0 0 24 24" fill="red"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.188 2.25 12.514 2.25 9.318 2.25 7.114 4.06 5.25 6.375 5.25c1.36 0 2.693.633 3.62 1.707l.005.006a.75.75 0 001.12 0l.006-.006C12.053 5.883 13.386 5.25 14.746 5.25c2.314 0 4.124 1.864 4.124 4.068 0 3.196-2.438 5.87-4.739 7.988a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.218l-.022.012-.007.003-.003.002a.75.75 0 01-.698 0l-.003-.002z"/></svg>
           </button>
         </div>
         <div>
-          <div class="text-3xl font-bold tracking-tight number mb-2"></div>
-          <span class="inline-flex items-center gap-1 text-xs px-3 py-1 rounded-full bg-[#F3FDF6] text-slate-700 border font-semibold">
+          <div class="text-xl sm:text-3xl font-bold tracking-tight number mb-1 sm:mb-2"></div>
+          <span class="inline-flex items-center gap-1 text-xs px-2 sm:px-3 py-1 rounded-full bg-[#F3FDF6] text-slate-700 border font-semibold">
             <span class="category"></span>
           </span>
         </div>
-        <div class="mt-auto grid grid-cols-2 gap-3">
-          <button class="icon-btn copy-btn flex items-center justify-center gap-2 rounded-xl border border-[#E6E6E6] bg-white hover:bg-slate-50 active:bg-slate-100 py-2 text-base font-semibold text-slate-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.103 0-2 .897-2 2v12h2V3h12V1z"></path><path d="M20 5H8c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zm0 16H8V7h12v14z"></path></svg>
+        <div class="mt-auto grid grid-cols-2 gap-2 sm:gap-3">
+          <button class="icon-btn copy-btn flex items-center justify-center gap-2 rounded-xl border border-[#E6E6E6] bg-white hover:bg-slate-50 active:bg-slate-100 py-2 text-xs sm:text-base font-semibold text-slate-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 sm:size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.103 0-2 .897-2 2v12h2V3h12V1z"></path><path d="M20 5H8c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zm0 16H8V7h12v14z"></path></svg>
             <span>Copy</span>
           </button>
-          <button class="icon-btn call-btn flex items-center justify-center gap-2 rounded-xl bg-[#00A943] hover:bg-[#00913A] active:bg-[#007A2E] text-white py-2 text-base font-semibold">
-            <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M21 16.5l-5.2-1.3a1 1 0 00-1 .26l-2.2 2.2a16 16 0 01-7.2-7.2l2.2-2.2a1 1 0 00.26-1L7.5 3a1 1 0 00-1.2-.74L2.3 3.02A1 1 0 001.5 4c0 10.22 8.28 18.5 18.5 18.5a1 1 0 00.98-.8l.76-4a1 1 0 00-.74-1.2z"/></svg>
+          <button class="icon-btn call-btn flex items-center justify-center gap-2 rounded-xl bg-[#00A943] hover:bg-[#00913A] active:bg-[#007A2E] text-white py-2 text-xs sm:text-base font-semibold">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 sm:size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M21 16.5l-5.2-1.3a1 1 0 00-1 .26l-2.2 2.2a16 16 0 01-7.2-7.2l2.2-2.2a1 1 0 00.26-1L7.5 3a1 1 0 00-1.2-.74L2.3 3.02A1 1 0 001.5 4c0 10.22 8.28 18.5 18.5 18.5a1 1 0 00.98-.8l.76-4a1 1 0 00-.74-1.2z"/></svg>
             <span>Call</span>
           </button>
         </div>
