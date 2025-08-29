@@ -1,14 +1,14 @@
 // ---------- Data ----------
 const services = [
-	{ id: 'nat', bn: 'জাতীয় জরুরি সেবা', en: 'National Emergency Number', number: '999', category: 'All', icon: '🚨' },
-	{ id: 'pol', bn: 'পুলিশ', en: 'Police Helpline Number', number: '999', category: 'Police', icon: '👮' },
-	{ id: 'fire', bn: 'ফায়ার সার্ভিস', en: 'Fire Service Number', number: '999', category: 'Fire', icon: '🚒' },
-	{ id: 'amb', bn: 'অ্যাম্বুলেন্স', en: 'Ambulance Service', number: '1994-999999', category: 'Health', icon: '🚑' },
-	{ id: 'wcn', bn: 'নারী ও শিশু হেল্পলাইন', en: 'Women & Child Helpline', number: '109', category: 'Help', icon: '👩‍👧' },
-	{ id: 'anti', bn: 'দুর্নীতি দমন হেল্পলাইন', en: 'Anti-Corruption Helpline', number: '106', category: 'Govt.', icon: '🛡️' },
-	{ id: 'elec', bn: 'বিদ্যুৎ হেল্পলাইন', en: 'Electricity Helpline', number: '16216', category: 'Electricity', icon: '💡' },
-	{ id: 'brac', bn: 'ব্র্যাক হেল্পলাইন', en: 'Brac Helpline', number: '16445', category: 'NGO', icon: '🏥' },
-	{ id: 'rail', bn: 'বাংলাদেশ রেলওয়ে হেল্পলাইন', en: 'Bangladesh Railway Helpline', number: '163', category: 'Travel', icon: '🚆' },
+	{ id: 'nat', en: 'National Emergency Number', number: '999', category: 'All', icon: './assets/emergency.png' },
+	{ id: 'pol', en: 'Police Helpline Number', number: '999', category: 'Police', icon: './assets/police.png' },
+	{ id: 'fire', en: 'Fire Service Number', number: '999', category: 'Fire', icon: './assets/fire-service.png' },
+	{ id: 'amb', en: 'Ambulance Service', number: '999', category: 'Health', icon: './assets/ambulance.png' },
+	{ id: 'wcn', en: 'Women & Child Helpline', number: '999', category: 'Help', icon: './assets/emergency.png' },
+	{ id: 'anti', en: 'Anti-Corruption Helpline', number: '999', category: 'Govt.', icon: './assets/emergency.png' },
+	{ id: 'elec', en: 'Electricity Helpline', number: '999', category: 'Electricity', icon: './assets/emergency.png' },
+	{ id: 'brac', en: 'Brac Helpline', number: '999', category: 'NGO', icon: './assets/brac.png' },
+	{ id: 'rail', en: 'Bangladesh Railway Helpline', number: '999', category: 'Travel', icon: './assets/Bangladesh-Railway.png' },
 ];
 
 // ---------- State ----------
@@ -55,24 +55,17 @@ function addHistory({ name, number }) {
 function makeCard(svc) {
 	const node = els.cardTpl.content.firstElementChild.cloneNode(true);
 	// Card info
-	node.querySelector('.service-en').textContent = svc.en;
-	node.querySelector('.service-bn').textContent = svc.bn;
+		node.querySelector('.service-en').textContent = svc.en;
+		const bnEl = node.querySelector('.service-bn');
+		if (bnEl) bnEl.remove();
 	node.querySelector('.number').textContent = svc.number;
 	node.querySelector('.category').textContent = svc.category;
-	// Icon image
-	const iconImg = node.querySelector('.service-icon');
-	if (iconImg) {
-		// If you have image URLs, use svc.icon as src, else fallback to emoji as data URI
-		if (svc.icon.startsWith('http')) {
+		// Icon image
+		const iconImg = node.querySelector('.service-icon');
+		if (iconImg) {
 			iconImg.src = svc.icon;
 			iconImg.alt = svc.en;
-		} else {
-			// Render emoji as SVG data URI for crisp display
-			const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text x='50%' y='50%' text-anchor='middle' dominant-baseline='central' font-size='28'>${svc.icon}</text></svg>`;
-			iconImg.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
-			iconImg.alt = svc.en;
 		}
-	}
 
 	// Like
 	node.querySelector('.like-btn').addEventListener('click', () => {
