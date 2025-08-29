@@ -1,4 +1,4 @@
-// ---------- Data ----------
+ 
 const services = [
 	{ id: 'nat', en: 'National Emergency Number', number: '999', category: 'All', icon: './assets/emergency.png' },
 	{ id: 'pol', en: 'Police Helpline Number', number: '999', category: 'Police', icon: './assets/police.png' },
@@ -11,7 +11,7 @@ const services = [
 	{ id: 'rail', en: 'Bangladesh Railway Helpline', number: '163', category: 'Travel', icon: './assets/Bangladesh-Railway.png' },
 ];
 
-// ---------- State ----------
+ 
 let likes = 0;
 let coins = 100;
 let copies = 0;
@@ -54,26 +54,26 @@ function addHistory({ name, number }) {
 
 function makeCard(svc) {
 	const node = els.cardTpl.content.firstElementChild.cloneNode(true);
-	// Card info
+ 
 		node.querySelector('.service-en').textContent = svc.en;
 		const bnEl = node.querySelector('.service-bn');
 		if (bnEl) bnEl.remove();
 	node.querySelector('.number').textContent = svc.number;
 	node.querySelector('.category').textContent = svc.category;
-		// Icon image
+ 
 		const iconImg = node.querySelector('.service-icon');
 		if (iconImg) {
 			iconImg.src = svc.icon;
 			iconImg.alt = svc.en;
 		}
 
-	// Like
+ 
 	node.querySelector('.like-btn').addEventListener('click', () => {
 		likes += 1;
 		updateCounters();
 	});
 
-	// Copy
+ 
 	node.querySelector('.copy-btn').addEventListener('click', async () => {
 		try {
 			await navigator.clipboard.writeText(svc.number);
@@ -85,7 +85,7 @@ function makeCard(svc) {
 		}
 	});
 
-	// Call
+ 
 	node.querySelector('.call-btn').addEventListener('click', () => {
 		if (coins < 20) {
 			alert('Not enough coins to place a call. You need at least 20 coins.');
@@ -100,15 +100,15 @@ function makeCard(svc) {
 	return node;
 }
 
-// Render all cards
+ 
 services.forEach(svc => {
 	els.cardsGrid.appendChild(makeCard(svc));
 });
 
-// Clear history
+ 
 els.clearHistoryBtn.addEventListener('click', () => {
 	els.historyList.innerHTML = '<div class="p-4 text-sm text-slate-500" id="historyEmpty">No calls yet.</div>';
 });
 
-// Initial counters
+ 
 updateCounters();

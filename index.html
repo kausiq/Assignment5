@@ -15,7 +15,7 @@
     </style>
 </head>
 <body class="bg-emerald-50 text-slate-800">
-  <!-- Navbar -->
+  
   <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center gap-2 sm:gap-3">
@@ -28,17 +28,17 @@
         </div>
       </div>
       <div class="flex items-center gap-2 sm:gap-4">
-        <!-- Heart count -->
+        
   <div class="flex items-center justify-center rounded-full px-6 py-2" style="background:rgba(65,255,120,0.1);">
           <svg xmlns="http://www.w3.org/2000/svg" class="size-6 text-red mr-2" viewBox="0 0 24 24" fill="red"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.188 2.25 12.514 2.25 9.318 2.25 7.114 4.06 5.25 6.375 5.25c1.36 0 2.693.633 3.62 1.707l.005.006a.75.75 0 001.12 0l.006-.006C12.053 5.883 13.386 5.25 14.746 5.25c2.314 0 4.124 1.864 4.124 4.068 0 3.196-2.438 5.87-4.739 7.988a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.218l-.022.012-.007.003-.003.002a.75.75 0 01-.698 0l-.003-.002z"/></svg>
           <span id="likesCount" class="text-base font-semibold text-black mr-2">0</span>
         </div>
-        <!-- Coin count -->
+        
   <div class="flex items-center justify-center rounded-full px-6 py-2" style="background:rgba(65,255,120,0.1);">
           <img src="./assets/coin.png" alt="Coin" class="size-6 mr-2" />
           <span id="coinCount" class="text-base font-semibold text-black mr-2">100</span>
         </div>
-        <!-- Copy count -->
+        
         <div class="flex items-center justify-center rounded-full bg-[#00A943] px-6 py-2">
           <span id="copyCount" class="text-base font-semibold text-white mr-2">0</span>
           <span class="text-base font-semibold text-white">Copy</span>
@@ -47,7 +47,7 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  
   <header class="text-white" style="background: linear-gradient(90deg, #013223 0%, #006747 50%, #013223 100%);">
     <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8 py-6 sm:py-10 text-center">
       <div class="mx-auto size-10 sm:size-12 rounded-full bg-emerald-900/80 flex items-center justify-center overflow-hidden mb-3 sm:mb-4">
@@ -61,12 +61,12 @@
   <!-- Main -->
   <main class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8 py-4 sm:py-6">
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-4">
-      <!-- Cards column -->
+      
       <section class="lg:col-span-3">
         <div id="cardsGrid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3"></div>
       </section>
 
-      <!-- History column -->
+      
       <aside class="lg:col-span-1">
         <div class="bg-white rounded-2xl shadow mt-4 lg:mt-0">
           <div class="flex items-center justify-between px-2 sm:px-4 py-2 sm:py-3 border-b">
@@ -84,13 +84,13 @@
     </div>
   </main>
 
-  <!-- Template for a card (cloned by JS) -->
+  
     <template id="cardTemplate">
       <div class="bg-white rounded-2xl shadow p-3 sm:p-5 flex flex-col gap-3 sm:gap-4 border border-[#F3FDF6]" style="box-shadow:0 2px 12px 0 rgba(65,255,120,0.08);">
         <div class="flex items-start justify-between">
           <div class="flex items-center gap-2 sm:gap-3">
             <div class="size-10 sm:size-12 rounded-xl flex items-center justify-center bg-[#FDEDED]">
-              <!-- icon slot -->
+              
               <img class="w-7 h-7 sm:w-8 sm:h-8 object-contain service-icon" src="" alt="icon">
             </div>
             <div>
